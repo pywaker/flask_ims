@@ -4,12 +4,14 @@
 ### MacOS and Linux
 
 - Open `Terminal` and run following command
+
 `curl -sSL https://install.python-poetry.org | python3 -`
 
 
 ### Windows
 
 - Open Powershell and run following command
+
 `(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -`
 
 
