@@ -1,0 +1,42 @@
+{% extends "dashboard.html.jinja2" %}
+{% block title %}Users | Dashboard{% endblock %}
+
+{% block section %}
+
+<table class="table caption-top">
+    <caption>All Users</caption>
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fullname</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Is Active</th>
+      <th scope="col">Datetime</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ user['fullname'] }}</td>
+      <td>{{ user['login'] }}</td>
+      <td>{{ user['role'] }}</td>
+      <td>{{ user['is_active'] }}</td>
+      <td>{{ user['added_on'] }}</td>
+      <td>
+        {% if user['role'] == "Staff" %}
+        <a href="{% if user['is_active'] %}{{ url_for('deactivate_user', userid=user['id']) }}{% else %}{{ url_for('reactivate_user', userid=user['id']) }}{% endif %}">
+        {% if user['is_active'] %}Deactivate User{% else %}Reactivate User{% endif %}
+        </a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="btn btn-primary" href="{{ url_for('add_user') }}" role="button">Add User</a>
+
+{% endblock %}

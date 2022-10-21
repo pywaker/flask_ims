@@ -49,8 +49,9 @@
 - [x] chapter 4: flask login
 - [x] chapter 5: add user and item, list user and item
 - [x] chapter 6: use persistent database, pony orm with sqlite, use cli command
-- [ ] chapter 7: activate and deactivate user
+- [x] chapter 7: activate and deactivate user, user and admin permissions
 - [ ] chapter 8: borrow and return item
+- [ ] chapter 9: misc
 
 
 ## Data
