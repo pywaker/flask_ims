@@ -27,3 +27,8 @@
 - `poetry install`
 - `poetry run flask --debug --app main run`
 
+
+### Running chapters
+
+- `poetry run flask --debug --app chapter1.main run`
+- `poetry run flask --debug --app chapter2.main run`
