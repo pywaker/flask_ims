@@ -1,0 +1,34 @@
+{% extends "dashboard.html.jinja2" %}
+{% block title %}Users | Dashboard{% endblock %}
+
+{% block section %}
+
+<table class="table caption-top">
+    <caption>All Users</caption>
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Fullname</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Is Active</th>
+      <th scope="col">Datetime</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ user['fullname'] }}</td>
+      <td>{{ user['email'] }}</td>
+      <td>{{ user['role'].value }}</td>
+      <td>{{ user['is_active'] }}</td>
+      <td>{{ user['datetime'] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="btn btn-primary" href="{{ url_for('add_user') }}" role="button">Add User</a>
+
+{% endblock %}

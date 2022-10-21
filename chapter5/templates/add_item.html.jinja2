@@ -1,0 +1,32 @@
+{% extends "dashboard.html.jinja2" %}
+{% block title %}Add Item | Dashboard{% endblock %}
+
+{% block section %}
+<div class="container">
+    <div class="col-3"></div>
+    <div class="col-6">
+        {% if message %}
+    <div class="alert alert-danger" role="alert">
+      {{ message }}
+    </div>
+    {% endif %}
+        <form method="post">
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Count</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" name="count">
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

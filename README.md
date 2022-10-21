@@ -35,6 +35,7 @@
 - `poetry run flask --debug --app chapter3.main run`
 - `poetry install`
 - `poetry run flask --debug --app chapter4.main run`
+- `poetry run flask --debug --app chapter5.main run`
 
 
 ## Chapters
@@ -43,11 +44,12 @@
 - [x] chapter 2: flask routes and templates
 - [x] chapter 3: simple login with flask session
 - [x] chapter 4: flask login
-- [ ] chapter 5: add user and add item
-- [ ] chapter 6: activate and deactivate user
-- [ ] chapter 7: borrow and return item
-- [ ] chapter 8: use persistent database
-- [ ] chapter 9: use cli command
+- [x] chapter 5: add user and item, list user and item
+- [ ] chapter 6: use persistent database, 
+- [ ] chapter 7: use cli command
+- [ ] chapter 8: activate and deactivate user
+- [ ] chapter 9: borrow and return item
+
 
 ## Data
 Admin
