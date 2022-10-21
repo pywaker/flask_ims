@@ -1,0 +1,27 @@
+{% extends "dashboard.html.jinja2" %}
+{% block title %}Items | Dashboard{% endblock %}
+
+{% block section %}
+<table class="table caption-top">
+<caption>All Items</caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Count</th>
+      <th scope="col">Date Added</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row">{{ loop.index }}</th>
+      <td>{{ item['name'] }}</td>
+      <td>{{ item['count'] }}</td>
+      <td>{{ item['added_on'] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="btn btn-primary" href="{{ url_for('add_item') }}" role="button">Add Item</a>
+{% endblock %}

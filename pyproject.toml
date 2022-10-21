@@ -10,6 +10,7 @@ packages = [{include = "flask_ims"}]
 python = "^3.8"
 Flask = "^2.2.2"
 flask-login = "^0.6.2"
+pony = "^0.7.16"
 
 
 [build-system]

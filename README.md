@@ -36,6 +36,9 @@
 - `poetry install`
 - `poetry run flask --debug --app chapter4.main run`
 - `poetry run flask --debug --app chapter5.main run`
+- `poetry install`
+- `poetry run flask --app chapter6.main create-admin admin@example.net admin123`
+- `poetry run flask --debug --app chapter6.main run`
 
 
 ## Chapters
@@ -45,10 +48,9 @@
 - [x] chapter 3: simple login with flask session
 - [x] chapter 4: flask login
 - [x] chapter 5: add user and item, list user and item
-- [ ] chapter 6: use persistent database, 
-- [ ] chapter 7: use cli command
-- [ ] chapter 8: activate and deactivate user
-- [ ] chapter 9: borrow and return item
+- [x] chapter 6: use persistent database, pony orm with sqlite, use cli command
+- [ ] chapter 7: activate and deactivate user
+- [ ] chapter 8: borrow and return item
 
 
 ## Data
