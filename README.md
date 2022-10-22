@@ -39,6 +39,8 @@
 - `poetry install`
 - `poetry run flask --app chapter6.main create-admin admin@example.net admin123`
 - `poetry run flask --debug --app chapter6.main run`
+- `poetry run flask --app chapter7.main create-admin admin@example.net admin123`
+- `poetry run flask --debug --app chapter7.main run`
 
 
 ## Chapters
